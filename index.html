@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Help Desk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+   <h1>HR Help Desk|Akshaya Patra Foundation |</h1>
+    <p>Manage staff queries, Required suggestions, suggestions, and complaints</p>
+  </header>
+
+  <main>
+    <!-- Staff Query/Complaint Form -->
+    <section class="card">
+      <h2>Submit Query / Complaint</h2>
+      <form id="queryForm">
+        <input type="text" id="staffName" placeholder="Your Name" required>
+        <input type="text" id="staffDept" placeholder="Department" required>
+        <select id="queryType" required>
+          <option value="">Select Type</option>
+          <option value="Query">Query</option>
+          <option value="Complaint">Complaint</option>
+        </select>
+        <textarea id="queryMsg" placeholder="Describe your issue..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+   <!-- Required Support Form -->
+<section class="card">
+  <h2>Required Support</h2>
+  <form id="supportForm">
+    
+    <select id="supportType" required>
+      <option value="">Select Support Type</option>
+      <option value="Attendance">Attendance</option>
+      <option value="Salary">Salary</option>
+      <option value="Zing HR Related Support">Zing HR Related Support</option>
+      <option value="Kitchen Related Complaints">Kitchen Related Complaints</option>
+      <option value="Security">Security</option>
+      <option value="Housekeeping Related Complaints">Housekeeping Related Complaints</option>
+    </select>
+    <textarea id="supportMsg" placeholder="Describe your issue..." required></textarea>
+    <button type="submit">Request Support</button>
+  </form>
+</section>
+    <!-- Suggestion Form -->
+    <section class="card">
+      <h2>Suggestion Box</h2>
+      <form id="suggestionForm">
+        <input type="text" id="suggestionName" placeholder="Your Name" required>
+        <textarea id="suggestionMsg" placeholder="Your suggestion..." required></textarea>
+        <button type="submit">Submit Suggestion</button>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="card dashboard">
+      <h2>Dashboard</h2>
+      <div>
+        <div>
+  <button onclick="showTab('queries')">Queries/Complaints</button>
+  <button onclick="showTab('supports')">Required Support</button>
+  <button onclick="showTab('suggestions')">Suggestions</button>
+</div>
+      </div>
+      <div id="dashboardContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HR Help Desk Developed By Vineet Kumar| Your data is private and secure</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
